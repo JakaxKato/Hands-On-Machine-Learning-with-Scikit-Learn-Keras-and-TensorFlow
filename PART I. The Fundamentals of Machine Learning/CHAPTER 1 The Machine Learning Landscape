@@ -1,1 +1,163 @@
 
+Chapter 1 — The Machine Learning Landscape (Summary)
+
+(English, structured, with figure placements)
+
+1. What Is Machine Learning?
+
+Machine Learning (ML) is defined as the science and art of programming computers to learn from data.
+Arthur Samuel (1959) describes ML as the field that gives computers the ability to learn without being explicitly programmed.
+Tom Mitchell (1997) provides an operational definition:
+A program learns from experience (E) on task (T) with performance metric (P) if its performance on T improves with E.
+
+A spam filter is a practical example:
+
+Task (T): classify emails as spam or ham
+
+Experience (E): past labeled emails
+
+Performance (P): accuracy
+
+Downloading data (e.g., Wikipedia) is not ML unless performance on a task improves.
+
+2. Why Use Machine Learning?
+Traditional Rule-Based Programming
+
+Writing a spam filter manually requires crafting many rules such as detecting specific words (“4U”, “credit card”, “free”).
+This results in long, fragile, and hard-to-maintain code.
+
+Insert Figure 1-1 — Traditional approach
+![Figure 1-1: Traditional rule-based approach](../images/ch1/figure1-1.png)
+(Figure shows a manual rule-writing process: study problem → write rules → test → launch.)
+
+ML-Based Approach
+
+A Machine Learning spam filter automatically learns which words/phrases are predictive of spam by analyzing patterns in labeled emails.
+
+Insert Figure 1-2 — ML approach
+![Figure 1-2: The Machine Learning approach](../images/ch1/figure1-2.png)
+(Figure shows: provide data → train ML algorithm → evaluate → launch.)
+
+ML is easier to update, more scalable, and more adaptive.
+
+Automatic Adaptation to New Patterns
+
+If spammers modify wording (“4U” → “For U”), rule-based programs must be manually updated.
+ML systems adapt automatically by learning from new examples.
+
+Insert Figure 1-3 — Automatic adaptation
+![Figure 1-3: Automatically adapting to change](../images/ch1/figure1-3.png)
+(Figure shows the system updating itself when new spam patterns emerge.)
+
+ML for Complex or Unsolvable Problems
+
+Some tasks—like large-vocabulary speech recognition—are too complex for hand-crafted rules.
+ML is also used for discovering patterns in data (data mining).
+
+ML Helps Humans Learn
+
+By analyzing models (e.g., spam classifier weights), humans can discover correlations and insights.
+
+Insert Figure 1-4 — ML helping humans learn
+![Figure 1-4: Machine Learning can help humans learn](../images/ch1/figure1-4.png)
+
+3. Summary of ML Benefits
+
+ML excels when:
+
+Manual rules are too complex or numerous
+
+No known algorithm exists
+
+Environments change frequently
+
+Insights need to be extracted from large datasets
+
+4. Examples of Machine Learning Applications
+
+The chapter lists many ML tasks and typical algorithms for each (only key highlights):
+
+Application	ML Technique
+Image product classification	CNNs
+Tumor detection (semantic segmentation)	CNNs
+News article classification	RNNs, CNNs, Transformers
+Offensive text detection	NLP classification
+Document summarization	Sequence-to-sequence NLP
+Chatbots	NLP + NLU modules
+Revenue forecasting	Regression models
+Voice command apps	Speech recognition (RNNs, CNNs, Transformers)
+Fraud detection	Anomaly detection
+Customer segmentation	Clustering
+Dimensionality visualization	PCA, t-SNE
+Recommender systems	Neural networks
+Game-playing bots	Reinforcement Learning
+5. Types of Machine Learning Systems
+
+ML systems are categorized by:
+
+A. Supervision Level
+
+Supervised Learning: training data includes labels
+
+Classification (e.g., spam detection)
+
+Regression (predict numeric values)
+
+Insert Figure 1-5 — Labeled training set
+![Figure 1-5: Labeled training set](../images/ch1/figure1-5.png)
+
+Insert Figure 1-6 — Regression example
+![Figure 1-6: Regression problem](../images/ch1/figure1-6.png)
+
+Algorithms: k-NN, Linear/Logistic Regression, SVMs, Decision Trees, Random Forests, Neural Networks.
+
+Unsupervised Learning: no labels
+
+Clustering (K-Means, DBSCAN, HCA)
+
+Dimensionality reduction (PCA, LLE, t-SNE)
+
+Anomaly detection
+
+Association rule learning
+
+Insert Figure 1-7 — Unlabeled dataset
+![Figure 1-7: Unlabeled dataset](../images/ch1/figure1-7.png)
+
+Insert Figure 1-8 — Clustering example
+![Figure 1-8: Clustering](../images/ch1/figure1-8.png)
+
+Insert Figure 1-9 — t-SNE visualization
+![Figure 1-9: t-SNE visualization](../images/ch1/figure1-9.png)
+
+Insert Figure 1-10 — Anomaly detection
+![Figure 1-10: Anomaly detection](../images/ch1/figure1-10.png)
+
+Semisupervised Learning: mostly unlabeled data + a few labels
+(e.g., Google Photos automatic face grouping)
+
+Insert Figure 1-11 — Semisupervised learning
+![Figure 1-11: Semisupervised learning](../images/ch1/figure1-11.png)
+
+Reinforcement Learning: an agent takes actions to maximize cumulative reward
+
+Insert Figure 1-12 — Reinforcement Learning
+![Figure 1-12: Reinforcement Learning](../images/ch1/figure1-12.png)
+
+B. Batch vs. Online Learning
+
+Batch learning: trained offline, heavy computation
+
+Online learning: continuously learns from data streams
+Useful for rapidly changing environments
+
+C. Instance-Based vs. Model-Based
+
+Instance-based: compares new data to stored examples
+
+Model-based: learns a general model (e.g., linear regression)
+
+Conclusion
+
+Chapter 1 introduces the essential ideas of Machine Learning, explains why ML is needed, highlights real-world applications, and classifies ML systems by their learning type and behavior.
+It establishes the conceptual foundation for the rest of the book.
